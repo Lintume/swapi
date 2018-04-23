@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\SwapiUser;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -35,9 +34,6 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        $swapi_users = SwapiUser::paginate(10);
-        return view('welcome', compact(
-            'swapi_users'
-        ));
+        return view('welcome');
     }
 }
